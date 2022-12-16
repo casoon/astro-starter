@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 export interface Props {
 	title: string;
 }
@@ -7,7 +9,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -32,4 +34,9 @@ const { title } = Astro.props;
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
+	#test2 {
+		background: #da62c4;
+	}
+
+
 </style>
