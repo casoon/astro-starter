@@ -1,0 +1,45 @@
+{
+  "name": "astro-starter",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "Static pages with Astro",
+  "keywords": [
+    "astro",
+    "jamstack",
+    "alpinejs",
+    "vite"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/casoon/astro-starter.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jörn Seidel",
+    "email": "joern.seidel@casoon.de",
+    "url": "https://www.casoon.de/"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^1.6.15",
+    "alpinejs": "^3.0.1",
+    "core-js": "^3.20.2",
+    "speedlify-score": "^2.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.19",
+    "postcss-import": "^15.0.1",
+    "postcss-csso": "^6.0.1",
+    "postcss-media-minmax": "^5.0.0",
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "cssnano": "^5.1.14"
+  }
+}
