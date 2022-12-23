@@ -1,8 +1,5 @@
 module.exports = {
   plugins: {
-    "postcss-import": {},
-    "postcss-media-minmax": {},
-    "postcss-csso": {},
     autoprefixer: {},
     cssnano: {},
     "@fullhuman/postcss-purgecss": {

@@ -30,8 +30,7 @@
   "dependencies": {
     "astro": "^1.6.15",
     "alpinejs": "^3.0.1",
-    "core-js": "^3.20.2",
-    "speedlify-score": "^2.0.2"
+    "core-js": "^3.20.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
@@ -40,6 +39,11 @@
     "postcss-csso": "^6.0.1",
     "postcss-media-minmax": "^5.0.0",
     "@fullhuman/postcss-purgecss": "^5.0.0",
-    "cssnano": "^5.1.14"
+    "cssnano": "^5.1.14",
+    "sass": "^1.57.1",
+    "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/image": "^0.12.1",
+    "sharp": "^0.31.3",
+    "astro-compress": "^1.1.24"
   }
 }
