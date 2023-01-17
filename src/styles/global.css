@@ -1,3 +1,25 @@
-#test3 {
-    background: aquamarine;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+}
+
+
+@layer base {
+    h1 {
+        @apply font-medium leading-tight text-5xl mb-2;
+    }
+    h2 {
+        @apply font-medium leading-tight text-4xl mb-2;
+    }
+    h3 {
+        @apply font-medium leading-tight text-3xl mb-2;
+    }
+}
+
+@layer components {
+
 }

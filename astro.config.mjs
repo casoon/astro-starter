@@ -2,6 +2,9 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import image from '@astrojs/image';
 import compress from 'astro-compress';
+import tailwind from '@astrojs/tailwind';
+import alpine from '@astrojs/alpinejs';
+import partytown from '@astrojs/partytown';
 
 // https://astro.build/config
 export default defineConfig(
@@ -21,7 +24,15 @@ export default defineConfig(
                 js: false,
                 svg: false,
                 logger: 0,
-            })
+            }),
+            tailwind({
+                config: {
+                    applyBaseStyles: false,
+                },
+            }),
+            alpine(),
+            partytown()
         ],
-    }
+    },
+
 );
