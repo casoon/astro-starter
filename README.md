@@ -3,7 +3,7 @@ This is a sample starter template for building fully static site using [Astro](h
 
 ## Features
 
-- Astro 1
+- Astro 2.x
 - Alpine.js 3
 
 ### Install Dependencies
