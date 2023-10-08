@@ -1,8 +1,6 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig} from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import image from '@astrojs/image';
 import compress from 'astro-compress';
-import tailwind from '@astrojs/tailwind';
 import alpine from '@astrojs/alpinejs';
 import partytown from '@astrojs/partytown';
 
@@ -16,7 +14,6 @@ export default defineConfig(
                 changefreq: 'weekly',
                 priority: 0.7,
                 lastmod: new Date('2022-12-21')}),
-            image({serviceEntryPoint: '@astrojs/image/sharp', cacheDir: "./.cache/image", logLevel: 'debug'}),
             compress({
                 css: false,
                 html: true,
@@ -25,14 +22,19 @@ export default defineConfig(
                 svg: false,
                 logger: 0,
             }),
-            tailwind({
-                config: {
-                    applyBaseStyles: false,
-                },
-            }),
             alpine(),
             partytown()
         ],
+        output: 'static',
+        vite: {
+            build: {
+                rollupOptions: {
+                    output: {
+                        assetFileNames: 'assets/[name][extname]',
+                    }
+                }
+            }
+        }
     },
 
 );

@@ -1,25 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "open-props/style";
+@import "open-props/normalize";
+@import "open-props/animations";
+@import "open-props/easings";
 
 :root {
     --primary-color: #000000;
     --secondary-color: #ffffff;
 }
 
-
-@layer base {
-    h1 {
-        @apply font-medium leading-tight text-5xl mb-2;
-    }
-    h2 {
-        @apply font-medium leading-tight text-4xl mb-2;
-    }
-    h3 {
-        @apply font-medium leading-tight text-3xl mb-2;
-    }
+h1 {
+    opacity: 0;
+    color: var(--grape-6);
+    animation:
+            var(--animation-fade-in) forwards,
+            var(--animation-slide-in-up) forwards;
 }
 
-@layer components {
-
+button {
+    /*
+      using `reverse` means we dont have to put
+      opacity: 0 or scale(.8) anywhere
+    */
+    animation:
+            var(--animation-scale-down) reverse,
+            var(--animation-fade-out) reverse;
+    animation-timing-function: var(--ease-squish-5);
+    animation-duration: 1s;
 }
