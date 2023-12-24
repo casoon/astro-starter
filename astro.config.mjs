@@ -3,6 +3,7 @@ import sitemap from '@astrojs/sitemap';
 import compress from 'astro-compress';
 import alpine from '@astrojs/alpinejs';
 import partytown from '@astrojs/partytown';
+import criticalCSS from "astro-critical-css";
 
 // https://astro.build/config
 export default defineConfig(
@@ -23,7 +24,8 @@ export default defineConfig(
                 logger: 0,
             }),
             alpine(),
-            partytown()
+            partytown(),
+            criticalCSS()
         ],
         output: 'static',
         vite: {
