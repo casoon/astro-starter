@@ -3,8 +3,8 @@ This is a sample starter template for building fully static site using [Astro](h
 
 ## Features
 
-- Astro 2.x
-- Alpine.js 4
+- Astro 4.x
+- Alpine.js 3
 
 ### Install Dependencies
 `npm install` or `yarn install`
