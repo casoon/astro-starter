@@ -1,6 +1,7 @@
 ---
-import 'animate.css';
-import '../styles/global.css';
+import { ViewTransitions } from "astro:transitions";
+
+import Nav from "../components/Nav.astro";
 
 export interface Props {
 	title: string;
@@ -11,34 +12,41 @@ export interface Props {
 const { title, description, keywords}: Props = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content={description}>
-		<meta name="keywords" content={keywords}>
-		<title>{title}</title>
-	</head>
-	<body>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="generator" content={Astro.generator} />
+	<meta name="description" content={description}>
+	<meta name="keywords" content={keywords}>
+	<title>{title}</title>
+</head>
+<body>
+
+	<!-- Header -->
+	<header class="container">
+		<hgroup>
+			<h1>Pico</h1>
+			<p>A pure HTML example, without dependencies.</p>
+		</hgroup>
+	</header>
+	<!-- ./ Header -->
+
+
+	<main class="container">
 		<slot />
-	</body>
+	</main>
+</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+
+
+<style>
+	@import "/src/styles/global.css";
+	@import "@picocss/pico";
+	@import "animate.css";
+
 
 
 </style>

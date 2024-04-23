@@ -1,0 +1,144 @@
+<nav>
+    <div class="div-container">
+        <div class="hidden sm:block">
+            <a id="title" href="/">joshua lamorey-salzmann</a>
+        </div>
+        <div class="block sm:hidden mt-3">
+            <a id="title" href="/">jdlms</a>
+        </div>
+
+        <div
+                id="menuToggle"
+                class="md:hidden cursor-pointer justify-end"
+        >
+            <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="menu-icon"
+            >
+                <line
+                        x1="7"
+                        y1="12"
+                        x2="21"
+                        y2="12"
+                        stroke="#ad7753"
+                        class="line"></line>
+                <line
+                        x1="3"
+                        y1="6"
+                        x2="21"
+                        y2="6"
+                        stroke="#ff6b6b"
+                        class="line"></line>
+                <line
+                        x1="12"
+                        y1="18"
+                        x2="21"
+                        y2="18"
+                        stroke="#ffd700"
+                        class="line"></line>
+            </svg>
+        </div>
+    </div>
+
+    <ul id="menu" class="hidden md:flex">
+        <li class="link one">
+            <a href="/bookmarks">bookmarks</a>
+        </li>
+        <li class="link two">
+            <a href="/projects">projects</a>
+        </li>
+        <li class="link one">
+            <a href="/blog">blog</a>
+        </li>
+    </ul>
+</nav>
+
+<style>
+    nav {
+        @apply md:flex justify-between md:pb-5 md:pt-6;
+    }
+
+    .div-container {
+        @apply flex justify-between p-4;
+    }
+
+    ul {
+        @apply flex flex-col items-end md:flex-row;
+    }
+
+    a {
+        @apply text-sm md:text-xl;
+    }
+
+    a {
+        font-family: var(--font-sans);
+    }
+
+    .link {
+        @apply block px-4 py-2 text-sm   md:px-2 md:text-xl;
+    }
+
+    #title {
+        @apply px-3 md:text-lg text-my-gray font-extrabold font-mono border-2 rounded border-my-accent p-4;
+    }
+
+    .two {
+        @apply text-my-gray;
+    }
+
+    .one {
+        color: #ff6b6b;
+        font-weight: var(--font-weight-7);
+        text-decoration: underline;
+        text-decoration-color: #ffd700;
+        text-decoration-thickness: 2px;
+    }
+
+    .two {
+        font-weight: var(--font-weight-7);
+        text-decoration: underline;
+        text-decoration-color: #ffd700;
+        text-decoration-thickness: 2px;
+    }
+
+    @media (max-width: 767px) {
+        .one {
+            text-decoration-thickness: 1.5px;
+        }
+
+        .two {
+            text-decoration-thickness: 1.5px;
+        }
+    }
+</style>
+
+<script>
+    function setupMenuToggle() {
+        const menuToggle =
+            document.getElementById("menuToggle");
+        const menu = document.getElementById("menu");
+
+        if (menuToggle) {
+            menuToggle.addEventListener("click", () => {
+                menu?.classList.toggle("hidden");
+                console.log("event firing");
+            });
+        } else {
+            console.error("Menu toggle element not found!");
+        }
+    }
+
+    setupMenuToggle();
+
+    document.addEventListener(
+        "astro:after-swap",
+        setupMenuToggle,
+    );
+</script>
