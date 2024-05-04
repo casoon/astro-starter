@@ -22,3 +22,6 @@ pnpm-debug.log*
 .DS_Store
 
 .cache
+
+.idea/
+.vscode/
