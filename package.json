@@ -1,6 +1,6 @@
 {
   "name": "astro-starter",
-  "version": "0.1.0",
+  "version": "4.1.1",
   "type": "module",
   "private": true,
   "description": "Static pages with Astro",
@@ -49,6 +49,5 @@
     "@astrojs/sitemap": "^3.1.1",
     "@types/alpinejs": "^3.13.6",
     "vite-node": "^1.3.1"
-  },
-  "packageManager": "yarn@4.1.1"
+  }
 }
