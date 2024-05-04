@@ -40,6 +40,7 @@ const RAW_RUNTIME_STATE =
           ["astro", "npm:4.7.1"],\
           ["astro-robots-txt", "npm:1.0.0"],\
           ["browserslist", "npm:4.23.0"],\
+          ["deepmerge-ts", "npm:5.1.0"],\
           ["locomotive-scroll", "npm:4.1.4"],\
           ["vite-node", "npm:1.6.0"]\
         ],\
@@ -2235,6 +2236,7 @@ const RAW_RUNTIME_STATE =
           ["astro", "npm:4.7.1"],\
           ["astro-robots-txt", "npm:1.0.0"],\
           ["browserslist", "npm:4.23.0"],\
+          ["deepmerge-ts", "npm:5.1.0"],\
           ["locomotive-scroll", "npm:4.1.4"],\
           ["vite-node", "npm:1.6.0"]\
         ],\
